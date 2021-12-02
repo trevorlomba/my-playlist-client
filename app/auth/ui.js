@@ -1,4 +1,4 @@
-// const store = require('../store')
+const store = require('../store')
 
 const signUpSuccess = function (responseData) {
 //   // update the message on the screen
@@ -28,19 +28,40 @@ const signInSuccess = function (responseData) {
   $('form').trigger('reset')
 
   console.log('signInSuccess ran. responseData is :', responseData)
+  store.user = responseData.user
 }
 
 const signInFailure = function (error) {
   console.error('signInFailure ran. Error is :', error)
 }
 
+const signOutSuccess = function (responseData) {
+  $('form').trigger('reset')
+  store.user = null
+  console.log('signOutSuccess ran. responseData is :', responseData)
+}
+
+const signOutFailure = function (error) {
+  console.error('signOutFailure ran. Error is :', error)
+}
+
+const changePasswordSuccess = function (responseData) {
+  $('form').trigger('reset')
+
+  console.log('signOutSuccess ran. responseData is :', responseData)
+}
+
+const changePasswordFailure = function (error) {
+  console.error('signOutFailure ran. Error is :', error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
-  // signOutSuccess,
-  // signOutFailure,
-  // changePasswordSuccess,
-  // changePasswordFailure
+  signInFailure,
+  signOutSuccess,
+  signOutFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }

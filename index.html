@@ -37,6 +37,17 @@
               <button class="btn btn-primary">Sign in</button>
             </fieldset>
           </form>
+          <form id="change-password" class="border">
+            <fieldset>
+              <legend>Change Password</legend>
+              <input type="text" name="passwords[old]" placeholder="Old Password" required>
+              <input type="password" name="passwords[new]" placeholder="New Password" required>
+              <button class="btn btn-primary">Update</button>
+            </fieldset>
+          </form>
+      <section><form id="sign-out">
+        <button type="submit">Sign Out</button></form></section>
+      <section>
       <form id="create-song">
         <input name="song[title]" type="text">
         <input name="song[artist]" type="text">
@@ -44,5 +55,10 @@
         <input name="song[isrc]" type="number">
         <button type="submit">Create Song</button>
       </form>
+      <form id="index-songs"><button type="submit">Index</button></form>
+      <form id="show-song"><input name="song[id]" type=text><button type="submit">Show Song</button></form>
+      <form id="update-song"><input name="song[id]" type=text><input name="song[title]" type=text><input name="song[artist]" type=text><input name="song[album]" type=text><input name="song[isrc]" type=text><button type="submit">Update Song</button></form>
+      <form id="delete-song"><input name="song[id]" type=text><button type="submit">Delete Song</button></form>
+    </section>
     </body>
 </html>
