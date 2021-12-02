@@ -13,5 +13,36 @@
     </head>
     <body>
       <h1>Browser Template</h1>
+      <body class="container-fluid">
+        <h1>API Token Authentication</h1>
+        <h2> This is a toy application. Do not enter real passwords, or passwords you have used anywhere else!</h2>
+      
+        <section id="before-sign-in">
+          <form id="sign-up" class="border">
+            <fieldset>
+              <legend>Sign up</legend>
+              <input type="text" name="credentials[email]" placeholder="Email" required>
+              <input type="password" name="credentials[password]" placeholder="Password" required>
+              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+              <button class="btn btn-primary">Sign up</button>
+            </fieldset>
+          </form>
+        </section>
+        <section id="after-sign-in">
+          <form id="sign-in" class="border">
+            <fieldset>
+              <legend>Sign in</legend>
+              <input type="text" name="credentials[email]" placeholder="Email" required>
+              <input type="password" name="credentials[password]" placeholder="Password" required>
+              <button class="btn btn-primary">Sign in</button>
+            </fieldset>
+          </form>
+      <form id="create-song">
+        <input name="song[title]" type="text">
+        <input name="song[artist]" type="text">
+        <input name="song[album]" type="text">
+        <input name="song[isrc]" type="number">
+        <button type="submit">Create Song</button>
+      </form>
     </body>
 </html>
