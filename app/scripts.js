@@ -1,3 +1,5 @@
+$('#after-sign-in').hide()
+
 function generateTable (data) {
   const songs = data.song
   //   const btnGet = document.querySelector('button')

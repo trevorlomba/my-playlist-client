@@ -10,7 +10,6 @@ const signUpSuccess = function (responseData) {
 
   // clear (reset) the forms on the page
   $('form').trigger('reset')
-
   console.log('signUpSuccess ran. responseData is :', responseData)
 }
 
@@ -26,7 +25,8 @@ const signUpFailure = function (error) {
 
 const signInSuccess = function (responseData) {
   $('form').trigger('reset')
-
+  $('#before-sign-in').hide()
+  $('#after-sign-in').show()
   console.log('signInSuccess ran. responseData is :', responseData)
   store.user = responseData.user
 }
@@ -38,6 +38,8 @@ const signInFailure = function (error) {
 const signOutSuccess = function (responseData) {
   $('form').trigger('reset')
   store.user = null
+  $('#after-sign-in').hide()
+  $('#before-sign-in').show()
   console.log('signOutSuccess ran. responseData is :', responseData)
 }
 

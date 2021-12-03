@@ -11,14 +11,13 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1>Browser Template</h1>
-      <body class="container-fluid">
-        <h1>API Token Authentication</h1>
-        <h2> This is a toy application. Do not enter real passwords, or passwords you have used anywhere else!</h2>
-      
-        <section id="before-sign-in">
-          <form id="sign-up" class="border">
+    <body class="container-fluid">
+      <h1>My Playlist</h1>
+      <h2>Add songs to your playlist here!</h2>
+    
+      <section id="before-sign-in">
+        <section class="border authtools">
+          <form id="sign-up">
             <fieldset>
               <legend>Sign up</legend>
               <input type="text" name="credentials[email]" placeholder="Email" required>
@@ -27,44 +26,46 @@
               <button class="btn btn-primary">Sign up</button>
             </fieldset>
           </form>
-        </section>
-        <section id="after-sign-in">
-          <form id="sign-in" class="border">
+          <form id="sign-in">
             <fieldset>
               <legend>Sign in</legend>
               <input type="text" name="credentials[email]" placeholder="Email" required>
               <input type="password" name="credentials[password]" placeholder="Password" required>
               <button class="btn btn-primary">Sign in</button>
             </fieldset>
-          </form>
-          <form id="change-password" class="border">
-            <fieldset>
-              <legend>Change Password</legend>
-              <input type="text" name="passwords[old]" placeholder="Old Password" required>
-              <input type="password" name="passwords[new]" placeholder="New Password" required>
-              <button class="btn btn-primary">Update</button>
-            </fieldset>
-          </form>
-      <section><form id="sign-out">
-        <button type="submit">Sign Out</button></form></section>
-      <section>
-      <form id="create-song">
-        <input name="song[title]" type="text">
-        <input name="song[artist]" type="text">
-        <input name="song[album]" type="text">
-        <input name="song[isrc]" type="number">
-        <button type="submit">Create Song</button>
-      </form>
-      <form id="index-songs"><button type="submit">Index</button></form>
-      <form id="show-song"><input name="song[id]" type=text><button type="submit">Show Song</button></form>
-      <form id="update-song"><input name="song[id]" type=text><input name="song[title]" type=text><input name="song[artist]" type=text><input name="song[album]" type=text><input name="song[isrc]" type=text><button type="submit">Update Song</button></form>
-      <form id="delete-song"><input name="song[id]" type=text><button type="submit">Delete Song</button></form>
-      <form id="generate-table"><input name="" type=text><button type="submit">Generate Table</button></form>
-    <form id="generate-table"><input type="button">Generate a table.</form>
-    </section>
-    <div>
-      <button>Get</button>
-      <div id="table"></div>
-  </div>
-  </body>
+        </form>
+      </section>
+      </section>
+      <section id="after-sign-in">
+        <section class="border authtools">
+        <form id="change-password">
+          <fieldset>
+            <legend>Change Password</legend>
+            <input type="text" name="passwords[old]" placeholder="Old Password" required>
+            <input type="password" name="passwords[new]" placeholder="New Password" required>
+            <button class="btn btn-primary">Update</button>
+          </fieldset>
+        </form>
+    <form id="sign-out">
+      <button type="submit">Sign Out</button></form></section>
+    <form id="index-songs"> <legend>Index</legend><button type="submit">Index</button></form>
+    <div id="table"></div>
+    <form id="show-song"><legend>Show Song</legend><input name="song[id]" type="text" placeholder="ID"><button type="submit">Show Song</button></form>
+
+    <form id="create-song"> <legend>Create Song</legend>
+      <input name="song[title]" type="text" placeholder="Title">
+      <input name="song[artist]" type="text" placeholder="Artist">
+      <input name="song[album]" type="text" placeholder="Album">
+      <input name="song[isrc]" type="number" placeholder="ISRC">
+      <button type="submit">Create Song</button>
+    </form>
+    <form id="update-song"> <legend>Update Song</legend><input name="song[id]" placeholder="ID" type="text"><input name="song[title]" type="text" placeholder="Title">
+      <input name="song[artist]" type="text" placeholder="Artist">
+      <input name="song[album]" type="text" placeholder="Album">
+      <input name="song[isrc]" type="number" placeholder="ISRC"><button type="submit">Update Song</button></form>
+    <form id="delete-song"> <legend>Delete Song</legend><input name="song[id]" type="text" placeholder="ID"><button type="submit">Delete Song</button></form>
+    
+</section>
+</div>
+</body>
 </html>
