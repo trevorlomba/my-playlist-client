@@ -11,4 +11,5 @@ $(() => {
   require('./config')
   authEvents.addHandlers()
   songEvents.addHandlers()
+  require('./scripts')
 })
