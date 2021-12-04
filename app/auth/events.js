@@ -1,5 +1,6 @@
 const api = require('./api')
 const ui = require('./ui')
+const scripts = require('./../scripts')
 // const songsApi = require('../songs/api')
 
 const onSignUp = function (event) {
@@ -10,6 +11,7 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   api.signIn(event)
+    .then(scripts.clearTable)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }

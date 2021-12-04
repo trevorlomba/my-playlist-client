@@ -31,6 +31,7 @@ const onUpdateSong = function (event) {
 
 const onDeleteSong = function (event) {
   api.deleteSong(event)
+    .then(scripts.clearTable)
     .then(ui.deleteSongSuccess)
     .catch(ui.deleteSongFailure)
 }
