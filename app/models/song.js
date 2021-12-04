@@ -15,7 +15,7 @@ const songSchema = new mongoose.Schema({
   },
   isrc: {
     type: Number,
-    required: true
+    required: false
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
