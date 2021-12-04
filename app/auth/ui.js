@@ -1,4 +1,5 @@
 const store = require('../store')
+const scripts = require('./../scripts')
 
 const signUpSuccess = function (responseData) {
 //   // update the message on the screen
@@ -10,29 +11,32 @@ const signUpSuccess = function (responseData) {
 
   // clear (reset) the forms on the page
   $('form').trigger('reset')
-  console.log('signUpSuccess ran. responseData is :', responseData)
+
+  $('#ui').text('Signed Up Successfully')
+  scripts.displayUiSuccessMessage()
+  // console.log('signUpSuccess ran. responseData is :', responseData)
 }
 
-const signUpFailure = function (error) {
-  // $('#error-message').text('Error on sign up')
-
-  // // remove existing classes and add a red text-danger class from bootstrap
-  // $('#error-message').removeClass()
-  // $('#error-message').addClass('text-danger')
-
-  console.error('signUpFailure ran. Error is :', error)
+const signUpFailure = function () {
+  $('#ui').text('Sign Up Failed')
+  scripts.displayUiFailureMessage()
 }
 
 const signInSuccess = function (responseData) {
   $('form').trigger('reset')
   $('#before-sign-in').hide()
   $('#after-sign-in').show()
-  console.log('signInSuccess ran. responseData is :', responseData)
+
+  $('#ui').text('Signed In Successfully')
+  scripts.displayUiSuccessMessage()
+
+  // console.log('signInSuccess ran. responseData is :', responseData)
   store.user = responseData.user
 }
 
-const signInFailure = function (error) {
-  console.error('signInFailure ran. Error is :', error)
+const signInFailure = function () {
+  $('#ui').text('Sign In Failed')
+  scripts.displayUiFailureMessage()
 }
 
 const signOutSuccess = function (responseData) {
@@ -40,21 +44,30 @@ const signOutSuccess = function (responseData) {
   store.user = null
   $('#after-sign-in').hide()
   $('#before-sign-in').show()
-  console.log('signOutSuccess ran. responseData is :', responseData)
+
+  $('#ui').text('Signed Out Successfully')
+  scripts.displayUiSuccessMessage()
+
+  // console.log('signOutSuccess ran. responseData is :', responseData)
 }
 
-const signOutFailure = function (error) {
-  console.error('signOutFailure ran. Error is :', error)
+const signOutFailure = function () {
+  $('#ui').text('Sign Out Failed')
+  scripts.displayUiFailureMessage()
 }
 
 const changePasswordSuccess = function (responseData) {
   $('form').trigger('reset')
 
-  console.log('signOutSuccess ran. responseData is :', responseData)
+  $('#ui').text('Changed Password Successfully')
+  scripts.displayUiSuccessMessage()
+
+  // console.log('signOutSuccess ran. responseData is :', responseData)
 }
 
-const changePasswordFailure = function (error) {
-  console.error('signOutFailure ran. Error is :', error)
+const changePasswordFailure = function () {
+  $('#ui').text('Change Password Failed')
+  scripts.displayUiFailureMessage()
 }
 
 module.exports = {

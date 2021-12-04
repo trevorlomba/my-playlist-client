@@ -1,89 +1,56 @@
-const createSongSuccess = function (responseData) {
-//   // update the message on the screen
-//   $('#movies-display').text('Signed up successfully')
+const scripts = require('./../scripts')
 
-  //   // remove existing classes and add a green text-success class from bootstrap
-  //   $('#movies-display').removeClass()
-  //   $('#movies-display').addClass('text-success')
-
-  // clear (reset) the forms on the page
+const createSongSuccess = function () {
   $('form').trigger('reset')
 
-  console.log('createSongSuccess ran. responseData is :', responseData)
+  $('#ui').text('Created Song Successfully')
+  scripts.displayUiSuccessMessage()
 }
 
-const createSongFailure = function (error) {
-  // $('#error-message').text('Error on sign up')
-
-  // // remove existing classes and add a red text-danger class from bootstrap
-  // $('#error-message').removeClass()
-  // $('#error-message').addClass('text-danger')
-
-  console.error('createSongFailure ran. Error is :', error)
+const createSongFailure = function () {
+  $('#ui').text('Create Song Failed')
+  scripts.displayUiFailureMessage()
 }
 
-const indexSongsSuccess = function (responseData) {
-  console.log('indexSongsSuccess ran. responseData is :', responseData)
+const indexSongsSuccess = function () {
+  $('#ui').text('Indexed Songs Successfully')
+  scripts.displayUiSuccessMessage()
 }
 
-const indexSongsFailure = function (error) {
-  console.error('indexSongsFailure ran. Error is :', error)
+const indexSongsFailure = function () {
+  $('#ui').text('Index Songs Failed')
+  scripts.displayUiFailureMessage()
 }
 
-const showSongSuccess = function (responseData) {
-  console.log('showSongSuccess ran. responseData is :', responseData)
+const showSongSuccess = function () {
+  $('#ui').text('Showed Song Successfully')
+  scripts.displayUiSuccessMessage()
 }
 
-const showSongFailure = function (error) {
-  console.error('showSongFailure ran. Error is :', error)
+const showSongFailure = function () {
+  $('#ui').text('Show Song Failed')
+  scripts.displayUiFailureMessage()
 }
 
-const updateSongSuccess = function (responseData) {
-  console.log('updateSongSuccess ran. responseData is :', responseData)
+const updateSongSuccess = function () {
+  $('#ui').text('Updated Song Successfully')
+  scripts.displayUiSuccessMessage()
 }
 
-const updateSongFailure = function (error) {
-  console.error('updateSongFailure ran. Error is :', error)
+const updateSongFailure = function () {
+  $('#ui').text('Update Song Failed')
+  scripts.displayUiFailureMessage()
 }
 
-const deleteSongSuccess = function (responseData) {
-  console.log('deleteSongSuccess ran. responseData is :', responseData)
+const deleteSongSuccess = function () {
+  $('#ui').text('Deleted Song Successfully')
+  scripts.displayUiSuccessMessage()
 }
 
-const deleteSongFailure = function (error) {
-  console.error('deleteSongFailure ran. Error is :', error)
+const deleteSongFailure = function () {
+  $('#ui').text('Delete Song Failed')
+  scripts.displayUiFailureMessage()
 }
-// const signInSuccess = function (responseData) {
-//   $('form').trigger('reset')
-
-//   console.log('signInSuccess ran. responseData is :', responseData)
-//   store.user = responseData.user
-// }
-
-// const signInFailure = function (error) {
-//   console.error('signInFailure ran. Error is :', error)
-// }
-
-// const signOutSuccess = function (responseData) {
-//   $('form').trigger('reset')
-//   store.user = null
-//   console.log('signOutSuccess ran. responseData is :', responseData)
-// }
-
-// const signOutFailure = function (error) {
-//   console.error('signOutFailure ran. Error is :', error)
-// }
-
-// const changePasswordSuccess = function (responseData) {
-//   $('form').trigger('reset')
-
-//   console.log('signOutSuccess ran. responseData is :', responseData)
-// }
-
-// const changePasswordFailure = function (error) {
-//   console.error('signOutFailure ran. Error is :', error)
-// }
-
 module.exports = {
   createSongSuccess,
   createSongFailure,

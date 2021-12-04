@@ -4,11 +4,11 @@ const getFormFields = require('../../lib/get-form-fields.js')
 
 const signUp = function (event) {
   event.preventDefault()
-  console.log('sign up ran!')
+  // console.log('sign up ran!')
 
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
+  // console.log(formData)
 
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -20,11 +20,11 @@ const signUp = function (event) {
 
 const signIn = function (event) {
   event.preventDefault()
-  console.log('sign in ran!')
+  // console.log('sign in ran!')
 
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
+  // console.log(formData)
 
   return $.ajax({
     url: config.apiUrl + '/sign-in',
@@ -36,7 +36,7 @@ const signIn = function (event) {
 // REVISIT because I don't know how to include token in DELETE request
 const signOut = function (event) {
   event.preventDefault()
-  console.log('sign out ran!')
+  // console.log('sign out ran!')
 
   return $.ajax({
     url: config.apiUrl + '/sign-out',
@@ -52,11 +52,11 @@ const signOut = function (event) {
 
 const changePassword = function (event) {
   event.preventDefault()
-  console.log('change password ran!')
+  // console.log('change password ran!')
 
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
+  // console.log(formData)
 
   return $.ajax({
     url: config.apiUrl + '/change-password',

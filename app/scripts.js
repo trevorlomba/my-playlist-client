@@ -2,10 +2,20 @@ const store = require('./store')
 
 $('#after-sign-in').hide()
 
+const displayUiSuccessMessage = function () {
+  $('#ui').clearQueue().removeClass()
+  $('#ui').addClass('ui-success').css({ opacity: '0.0', 'font-weight': 'bolder', 'text-shadow': '0 0 10px #0080FF, 0 0 15px white' }).animate({ opacity: 1 }, 200).delay(2000).fadeTo(1000, 0.0)
+}
+
+const displayUiFailureMessage = function () {
+  $('#ui').clearQueue().removeClass()
+  $('#ui').addClass('ui-failure').css({ opacity: '0.0', 'font-weight': 'bolder', 'text-shadow': '0 0 10px red, 0 0 15px white' }).animate({ opacity: 1 }, 200).delay(2000).fadeTo(1000, 0.0)
+}
+
 function clearTable (data) {
   document.getElementById('head').innerHTML = ''
   document.getElementById('table').innerHTML = ''
-  console.log('clearTable ran!')
+  // console.log('clearTable ran!')
   return data
 }
 
@@ -50,7 +60,7 @@ function generateTable (data) {
   })
   myTable.appendChild(table)
 
-  console.log('generateTable ran!')
+  // console.log('generateTable ran!')
 
   return data
 }
@@ -98,13 +108,14 @@ function generateSong (data) {
     })
     myTable.appendChild(table)
   } else {
-    console.log('you dont own that song'
-    )
+    // console.log('you dont own that song')
   }
 }
 
 module.exports = {
   generateTable,
   generateSong,
-  clearTable
+  clearTable,
+  displayUiFailureMessage,
+  displayUiSuccessMessage
 }

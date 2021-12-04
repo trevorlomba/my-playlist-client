@@ -52,3 +52,14 @@ th, td {
 form {
     padding: 5px;
 }
+#ui {
+    opacity: 0;
+}
+ui-success {
+    font: Inconsolata;
+    color:rgba(rgb(121, 110, 216), 0.15);
+}
+ui-failure {
+    font: Inconsolata;
+    color:rgba(rgb(216, 110, 110), 0.15);
+}

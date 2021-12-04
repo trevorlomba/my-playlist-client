@@ -36,12 +36,6 @@ const onDeleteSong = function (event) {
     .catch(ui.deleteSongFailure)
 }
 
-// const onGenerateTable = function (event) {
-//   console.log('testingGenerateTable')
-//   // .then(ui.deleteSongSuccess)
-//   // .catch(ui.deleteSongFailure)
-// }
-
 const addHandlers = () => {
   $('#create-song').on('submit', onCreateSong)
   $('#index-songs').on('submit', onIndexSongs)
