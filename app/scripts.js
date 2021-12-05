@@ -32,7 +32,7 @@ function generateTable (data) {
   $('#head').html('Playlist')
 
   // generate header row
-  const headers = ['songId', 'title', 'artist', 'album', 'isrc']
+  const headers = ['songId', 'title', 'artist', 'album']
   const table = document.createElement('table')
   const headerRow = document.createElement('tr')
   headers.forEach(headerText => {
@@ -46,7 +46,7 @@ function generateTable (data) {
   // generate song data and print
   songs.forEach(song => {
     // include only columns of interest
-    const songDataForDisplay = Object.values(song).slice(0, 5)
+    const songDataForDisplay = Object.values(song).slice(0, 4)
     if (song.owner === userId) { // check for ownership
       const row = document.createElement('tr')
       Object.values(songDataForDisplay).forEach(text => {
