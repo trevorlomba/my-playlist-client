@@ -9,13 +9,6 @@ const onCreateSong = function (event) {
     .catch(ui.createSongSuccess)
 }
 
-const onIndexSongs = function (event) {
-  api.indexSongs(event)
-    .then(scripts.generateTable)
-    .then(ui.indexSongsSuccess)
-    .catch(ui.indexSongsFailure)
-}
-
 const onShowSong = function (event) {
   api.showSong(event)
     .then(scripts.generateSong)
@@ -25,23 +18,37 @@ const onShowSong = function (event) {
 
 const onUpdateSong = function (event) {
   api.updateSong(event)
+    // .then(api.indexSongs)
+    // .then(scripts.generateTable)
     .then(ui.updateSongSuccess)
     .catch(ui.updateSongFailure)
+  // api.indexSongs(event)
 }
 
 const onDeleteSong = function (event) {
   api.deleteSong(event)
-    .then(scripts.clearTable)
     .then(ui.deleteSongSuccess)
     .catch(ui.deleteSongFailure)
 }
 
+const onIndexSongsSpecific = function (event) {
+  api.indexSongs(event)
+    .then(scripts.generateTable)
+    .then(ui.indexSongsSuccess)
+    .catch(ui.indexSongsFailure)
+}
+
+const onIndexSongs = function (event) {
+  api.indexSongs(event)
+}
+
 const addHandlers = () => {
   $('#create-song').on('submit', onCreateSong)
-  $('#index-songs').on('submit', onIndexSongs)
   $('#show-song').on('submit', onShowSong)
   $('#update-song').on('submit', onUpdateSong)
   $('#delete-song').on('submit', onDeleteSong)
+  $('.index-songs').on('submit', onIndexSongs)
+  $('#index-songs').on('submit', onIndexSongsSpecific)
   // $('#generate-table').on('submit', onGenerateTable)
   // $('#change-password').on('submit', onChangePassword)
 }

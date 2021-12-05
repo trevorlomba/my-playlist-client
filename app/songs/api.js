@@ -31,6 +31,7 @@ const indexSongs = function (event) {
       Authorization: 'Bearer ' + store.user.token
     },
     success: function (data) {
+      console.log(data)
       return data
     }
 
@@ -74,8 +75,11 @@ const updateSong = function (event) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: formData
-
+    data: formData,
+    success: function (data) {
+      console.log(data)
+      return data
+    }
   })
 }
 
