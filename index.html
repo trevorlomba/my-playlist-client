@@ -12,9 +12,11 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h4 id="ui">UI TEST</h4>
+  
       <h1>My Playlists</h1>
-      <h2>Add songs to your playlist here!</h2>
+      <br>
+      <h4 id="ui">UI TEST</h4>
+      <br>
       <section id="before-sign-in">
         <section class="border authtools">
           <form id="sign-up">
@@ -37,18 +39,7 @@
       </section>
       </section>
       <section id="after-sign-in" >
-        <section class="border authtools">
-        <form id="change-password">
-          <fieldset>
-            <legend>Change Password</legend>
-            <input type="text" name="passwords[old]" placeholder="Old Password" required>
-            <input type="password" name="passwords[new]" placeholder="New Password" required>
-            <button class="btn btn-primary">Update</button>
-          </fieldset>
-        </form>
-    <form id="sign-out">
-      <button type="submit">Sign Out</button></form></section>
-      <h1 id="head"></h1>
+      <h3 id="head"></h3>
       <div id="table"></div>
       <form id="index-songs"> <legend>Index</legend><button type="submit">Index</button></form>
     <form id="show-song"><legend>Show Song</legend><input name="song[id]"    type="text" placeholder="ID" required><button type="submit">Show Song</button></form>
@@ -65,6 +56,20 @@
       <input name="song[album]" type="text" placeholder="Album">
       <input name="song[isrc]" type="number" placeholder="ISRC"><button type="submit">Update Song</button></form>
     <form id="delete-song"> <legend>Delete Song</legend><input name="song[id]"  type="text" placeholder="ID" required><button type="submit">Delete Song</button></form>
+    <br>
+    <br>
+    <br>
+    <section class="border authtools">
+      <form id="change-password">
+        <fieldset>
+          <legend>Change Password</legend>
+          <input type="text" name="passwords[old]" placeholder="Old Password" required>
+          <input type="password" name="passwords[new]" placeholder="New Password" required>
+          <button class="btn btn-primary">Update</button>
+        </fieldset>
+      </form>
+  <form id="sign-out">
+    <button type="submit">Sign Out</button></form></section>
     
 </section>
 </div>
