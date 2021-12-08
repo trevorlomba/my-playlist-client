@@ -1,0 +1,108 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    text-align: center;
+    background-color: black;
+    background-image: radial-gradient(
+        rgba(0, 150, 0, 0.75), black 120%
+    );
+    // height: 100vh;
+    margin: 0;
+    // overflow: hidden;
+    padding: 2rem;
+    color: white;
+    font: Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(black, 0.15),
+          rgba(black, 0.15) 1px,
+          transparent 1px,
+          transparent 2px
+        );
+        pointer-events: none;
+      }
+    }
+    ::selection {
+      background: #0080FF;
+      text-shadow: none;
+}
+div {
+    display: inline-block;
+}
+button {
+    display: inline-block;
+    // padding: 10px 20px;
+}
+#table {
+    display: inline-block;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+form {
+    padding: 5px;
+}
+#ui {
+    opacity: 0;
+}
+ui-success {
+    font: Inconsolata;
+    color:rgba(rgb(121, 110, 216), 0.15);
+}
+ui-failure {
+    font: Inconsolata;
+    color:rgba(rgb(216, 110, 110), 0.15);
+}
+.authtools {
+    display: block;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-sidebar > *:nth-child(1) {
+
+    flex: 30%;
+    max-width: 30ch;
+    min-width: 30ch;
+
+
+}
+
+.content-sidebar > *:nth-child(2) {
+    flex: 40%;
+}
+
+
+.content-sidebar > *:nth-child(3) {
+    flex: 100%;
+}
+// .user-tools {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border: 3px solid green; 
+// }
+
+form {
+    display: grid;
+    float: none;
+}
+
+.display-contents {
+    display: inline-block
+}

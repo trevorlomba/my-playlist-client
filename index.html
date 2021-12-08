@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>My Playlist</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+  
+      <h1>My Playlist</h1>
+      <br>
+      <h4 id="ui">UI TEST</h4>
+      <br>
+      <section id="before-sign-in">
+        <section class="border authtools">
+          <form id="sign-up">
+            <fieldset>
+              <legend>Sign up</legend>
+              <input type="text" name="credentials[email]" placeholder="Email" required>
+              <input type="password" name="credentials[password]" placeholder="Password" required>
+              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+              <button class="btn btn-primary">Sign up</button>
+            </fieldset>
+          </form>
+          <form id="sign-in">
+            <fieldset>
+              <legend>Sign in</legend>
+              <input type="text" name="credentials[email]" placeholder="Email" required>
+              <input type="password" name="credentials[password]" placeholder="Password" required>
+              <button class="btn btn-primary">Sign in</button>
+            </fieldset>
+          </form>
+        </section>
+      </section>
+      <section id="after-sign-in" >
+        <div class="content flow">
+          <div class="content-sidebar">
+            <div>
+              <div class= "user-tools">
+                <form id="index-songs"> 
+                  <button type="submit">Index</button>
+                </form>
+                <br>
+                <form id="show-song">
+                  <input name="song[id]" type="text" placeholder="ID" required>
+                  <button type="submit">Show Song</button>
+                </form>
+                <br>
+                <form id="create-song" class="index-songs"> 
+                  <input name="song[title]"   type="text" placeholder="Title" required>
+                  <input name="song[artist]" type="text" placeholder="Artist" required>
+                  <input name="song[album]" type="text" placeholder="Album">
+                  <input name="song[isrc]" type="number" placeholder="ISRC">
+                  <button type="submit">Create Song</button>
+                </form>
+                <br>
+                <form id="update-song" class="index-songs"> 
+                  <input name="song[id]"   placeholder="ID" type="text" required>
+                  <input name="song[title]" type="text" placeholder="Title">
+                  <input name="song[artist]" type="text" placeholder="Artist">
+                  <input name="song[album]" type="text" placeholder="Album">
+                  <input name="song[isrc]" type="number" placeholder="ISRC"><button type="submit">Update Song</button>
+                </form>
+                <br>
+                <form id="delete-song" class="index-songs">
+                  <input name="song[id]"  type="text" placeholder="ID" required>
+                  <button type="submit">Delete Song</button>
+                </form>
+                <br>
+                <br>
+                <form id="change-password">
+                    <!-- <fieldset> -->
+                      <legend>Change Password</legend>
+                      <input type="text" name="passwords[old]" placeholder="Old Password" required>
+                      <input type="password" name="passwords[new]" placeholder="New Password" required>
+                      <button class="btn btn-primary">Update</button>
+                    <!-- </fieldset> -->
+                  </form>
+                  <br>
+                  <form id="sign-out">
+                    <button class="btn btn-primary">Sign Out</button>
+                  </form> 
+                </div>
+             </div>
+            <div>
+              <div class="display-contents">
+                <h3 id="head"></h3>
+                <div id="table">
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    </body>
+</html>
